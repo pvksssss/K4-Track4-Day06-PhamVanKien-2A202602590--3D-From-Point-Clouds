@@ -1,0 +1,21 @@
+{
+  "dataset": "nuscenes_mini_subset",
+  "frame_id": "scene-1094_015",
+  "yaw_deg": -3.0,
+  "n_points": 34752,
+  "visible_points": 2816,
+  "fov_pct": 8.103130755064457,
+  "any_box_pct": 24.609375,
+  "common_points": 2638,
+  "lost_baseline_pct": 6.619469026548672,
+  "shift_mean_px": 78.64615623451428,
+  "shift_p95_px": 91.96500122143087,
+  "object_pairs": 485,
+  "matched_pairs": 347,
+  "object_retained_pct": 71.54639175257732,
+  "edge_distance_px": 38.43199920654297,
+  "edge_baseline_common_px": 38.537506103515625,
+  "edge_delta_px": -0.10550689697265625,
+  "fov_pct_baseline": 8.129028545119706,
+  "fov_change_pp": -0.025897790055248393
+}

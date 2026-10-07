@@ -40,7 +40,11 @@ Khác biệt giữa hai dataset có thể đến từ intrinsic/độ phân gi�
 
 ## 3. Failure case
 
-Ch?a ho?n th?nh checkpoint t??ng ?ng.
+Frame **scene-1094_015, yaw −3°**: shift trung bình **78,65 px**, p95 **91,97 px**, nhưng inside-FOV chỉ giảm **8,1290% → 8,1031%** (−0,0259 điểm phần trăm). Cảnh báo minh họa `|ΔFOV| ≥ 1 điểm phần trăm` sẽ bỏ sót; ngưỡng này chưa được huấn luyện hay kiểm định độc lập. Retention object giảm **100,00% → 71,55%**. Case được chọn tự động là shift lớn nhất trong các case `|yaw| ≥ 1°` có `|ΔFOV| < 1` trên chính tập thí nghiệm.
+
+![Trên: calibration gốc; dưới: yaw −3°](../results/figures/fail_01_fov_misses_drift.png)
+
+Lỗi gốc thuộc **Geometry**, còn việc metric bỏ sót thuộc **Metric**: điểm dịch bên trong khung ảnh, điểm ra ngoài có thể được bù bởi điểm mới đi vào. Mean distance tới Canny trên cùng ID điểm còn giảm **38,54 → 38,43 px** dù calibration sai; cạnh đường, đèn, texture và điểm mặt đường không tạo correspondence ngữ nghĩa đáng tin. Số chi tiết trong [failure_case.json](../results/failure_case.json). Do đó cả FOV lẫn Canny toàn ảnh đều cần được đối chiếu bằng ROI/object và nhiều frame.
 
 ## 4. Khuyến nghị nếu triển khai thật
 
