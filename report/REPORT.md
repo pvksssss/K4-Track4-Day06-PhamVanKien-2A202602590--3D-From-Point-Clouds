@@ -23,9 +23,13 @@ Ch?a ho?n th?nh checkpoint t??ng ?ng.
 
 Ch?a ho?n th?nh checkpoint t??ng ?ng.
 
-## 5. Cách chạy lại
+## 5. C?ch ch?y l?i
 
-Ch?a ho?n th?nh checkpoint t??ng ?ng.
+```powershell
+.\.venv\Scripts\python.exe -m starter.projection --data-root data/synthetic --frame 000000
+```
+
+?nh baseline: `results/figures/overlay_000000_r0.0_p0.0_y0.0_t0.0_0.0_0.0.png`.
 
 ## 6. Khai báo sử dụng AI
 
