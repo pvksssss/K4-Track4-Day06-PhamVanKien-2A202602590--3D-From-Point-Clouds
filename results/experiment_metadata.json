@@ -1,0 +1,28 @@
+{
+  "python": "3.14.5",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "numpy": "2.5.3",
+  "opencv": "5.0.0",
+  "matplotlib": "3.11.2",
+  "pandas": "3.0.6",
+  "data_roots": [
+    "data/kitti_mini",
+    "data/nuscenes_mini_subset"
+  ],
+  "yaw_deg": [
+    -3,
+    -2,
+    -1,
+    -0.5,
+    0,
+    0.5,
+    1,
+    2,
+    3
+  ],
+  "frame_limit": 0,
+  "n_frame_settings": 900,
+  "seed": "not applicable: deterministic, no random sampling",
+  "metrics": "Summary = unweighted mean across frames; object denominator = baseline-visible point-object pairs held fixed",
+  "source": "KITTI Vision Benchmark Suite; nuScenes (Motional)"
+}
