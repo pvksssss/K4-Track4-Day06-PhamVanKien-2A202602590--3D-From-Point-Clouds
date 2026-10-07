@@ -48,7 +48,7 @@ Lỗi gốc thuộc **Geometry**, còn việc metric bỏ sót thuộc **Metric*
 
 ## 4. Khuyến nghị nếu triển khai thật
 
-Ch?a ho?n th?nh checkpoint t??ng ?ng.
+Với ADAS, dùng FOV để cảnh báo mất dữ liệu lớn, kết hợp alignment trong ROI vật thể, timestamp gap và xu hướng qua nhiều frame. Ghi log số điểm hợp lệ, retention theo object/range và thời gian xử lý. Pixel shift ở đây cần calibration gốc nên chỉ là metric thí nghiệm, không dùng trực tiếp làm cảnh báo online nếu thiếu tham chiếu. Cần kiểm định ngưỡng trên tập giữ riêng, tách ngày/đêm, vật che khuất và sensor; cân nhắc giảm tần suất kiểm tra để tiết kiệm CPU. Chưa đo latency hoặc recall detector nên không đưa ra cam kết thời gian thực/an toàn.
 
 ## 5. Cách chạy lại
 
@@ -69,5 +69,10 @@ python -m venv .venv
 
 ## 6. Khai báo sử dụng AI
 
-Ch?a ho?n th?nh checkpoint t??ng ?ng.
+| Công cụ | Dùng cho việc gì | Kiểm chứng đã thực hiện |
+|---|---|---|
+| Codex (OpenAI) | Đọc đề, triển khai hai hàm projection, viết benchmark/kiểm tra, tạo biểu đồ và soạn báo cáo | Agent chạy 5 kiểm tra hình học, checksum dữ liệu, 900 cấu hình trên dữ liệu thật, đối chiếu CSV với báo cáo, xem ảnh và chạy checker. Các số liệu được tính từ code, không sinh ảnh kết quả bằng AI. |
 
+Các kiểm tra trên do agent thực hiện trong phiên làm việc này. Học viên cần tự chạy lại và đọc code trước khi trình bày; báo cáo không khẳng định học viên đã tự kiểm chứng hoặc vấn đáp.
+
+Lịch sử CP0–CP5 được tách theo nội dung sau khi thí nghiệm đã hoàn thành, với thời điểm commit thực tế; các commit không đại diện cho các mốc thời gian trong giờ lab.
